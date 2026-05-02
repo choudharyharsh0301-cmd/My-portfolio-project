@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ================================================
+       META & SEO
+       ================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harsh Choudhary — AI/ML Developer Portfolio. Cyberpunk-themed portfolio showcasing skills, projects and contact." />
+  <title>Harsh Choudhary | AIML Student</title>
+
+  <!-- ================================================
+       FONTS
+       IMPROVEMENT: Added Share Tech Mono as secondary
+       monospace font for terminal-feel body copy.
+       ================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================================================
+       NAVIGATION
+       IMPROVEMENT: Added proper href anchors, semantic
+       <nav>, logo as <a> for accessibility, mobile
+       hamburger toggle via checkbox hack (no JS).
+       ================================================ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Home">
+      HARSH<span class="logo-accent">.</span>DEV
+    </a>
+
+    <!-- Mobile hamburger (CSS-only) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+    <label for="nav-toggle" class="nav-hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about"   class="nav-link">About</a></li>
+      <li><a href="#skills"  class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#credentials" class="nav-link">Credentials</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================================================
+       HERO SECTION
+       IMPROVEMENT: Added staggered animation sequencing,
+       glitch effect on h1, scanline overlay div,
+       improved CTA button with neon pulse ring.
+       ================================================ -->
+  <section id="hero" class="hero" aria-label="Hero introduction">
+
+    <!-- Scanline overlay for CRT feel -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- Corner bracket decorations -->
+    <div class="corner corner--tl" aria-hidden="true"></div>
+    <div class="corner corner--tr" aria-hidden="true"></div>
+    <div class="corner corner--bl" aria-hidden="true"></div>
+    <div class="corner corner--br" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-pre" aria-label="System status">[ SYSTEM ONLINE ]</p>
+      <h1 class="hero-title glitch" data-text="HARSH CHOUDHARY">HARSH CHOUDHARY</h1>
+      <h2 class="hero-sub">Developer &nbsp;·&nbsp; B.Tech Student</h2>
+
+      <p class="hero-desc">
+        Navigating the chaotic grid of technology — currently pursuing B.Tech in
+        Artificial Intelligence &amp; Machine Learning at Jodhpur, Rajasthan.
+        Driven to build smarter systems and push the boundaries of automation.
+      </p>
+
+      <!-- Status bar row -->
+      <div class="hero-status" aria-label="Status indicators">
+        <span class="status-chip">&#x25CF; LEARNING</span>
+        <span class="status-chip">&#x25CF; 2nd YEAR</span>
+        <span class="status-chip">&#x25CF; BUILDING</span>
+      </div>
+
+      <a href="#about" class="cta-btn" aria-label="Enter portfolio">
+        <span class="cta-btn__text">ENTER PORTFOLIO</span>
+        <span class="cta-btn__ring" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================================================
+       ABOUT SECTION
+       IMPROVEMENT: Added class="about" to section so
+       CSS selector works. Restructured cards with
+       icon labels, fixed typos, improved visual hierarchy.
+       ================================================ -->
+  <section id="about" class="about section-wrapper" aria-label="About me">
+    <div class="section-header">
+      <h2 class="section-title">// ABOUT_ME</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="about-container">
+
+      <div class="about-card about-left">
+        <div class="card-badge">IDENTITY</div>
+        <h3 class="about-name">Harsh Choudhary</h3>
+        <ul class="about-list" aria-label="Personal details">
+          <li><span class="list-label">Program</span><span class="list-value">B.Tech — AI &amp; ML</span></li>
+          <li><span class="list-label">Location</span><span class="list-value">Jodhpur, Rajasthan, India</span></li>
+          <li><span class="list-label">Year</span><span class="list-value">2nd Year</span></li>
+          <li><span class="list-label">Status</span><span class="list-value accent-green">&#x25CF; Active Learner</span></li>
+        </ul>
+      </div>
+
+      <div class="about-card about-right">
+        <div class="card-badge">SYSTEM INFO</div>
+        <ul class="about-list" aria-label="Interests and focus">
+          <li><span class="list-label">Passion</span><span class="list-value">Technology &amp; Development</span></li>
+          <li><span class="list-label">Focus</span><span class="list-value">AI, ML, Automation</span></li>
+          <li><span class="list-label">Current</span><span class="list-value">Building projects, exploring frameworks</span></li>
+          <li><span class="list-label">Goal</span><span class="list-value accent-cyan">Smarter systems. Better future.</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       SKILLS SECTION — NEW
+       Grid of skill chips grouped by category.
+       ================================================ -->
+  <section id="skills" class="skills section-wrapper" aria-label="Skills">
+    <div class="section-header">
+      <h2 class="section-title">// SKILL_MODULES</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Languages</h3>
+        <div class="skill-chips">
+          <span class="chip">Python</span>
+          <span class="chip">C </span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML &amp; CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">AI / ML</h3>
+        <div class="skill-chips">
+          <span class="chip chip--magenta">Yolo</span>
+          <span class="chip chip--magenta">Currently learning</span>
+          
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Tools &amp; Platforms</h3>
+        <div class="skill-chips">
+          <span class="chip chip--yellow">Git &amp; GitHub</span>
+          <span class="chip chip--yellow">VS Code</span>
+          <span class="chip chip--yellow">Antigravity</span>
+          <span class="chip chip--yellow">Claude</span>
+         
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Currently Learning</h3>
+        <div class="skill-chips">
+        
+          <span class="chip chip--dim">Full Stack</span>
+          <span class="chip chip--dim">Deep Learning</span>
+          <span class="chip chip--dim">LLM models</span>
+          <span class="chip chip--dim"> Agentic Development</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       PROJECTS SECTION — NEW
+       Card grid with project details and links.
+       ================================================ -->
+  <section id="projects" class="projects section-wrapper" aria-label="Projects">
+    <div class="section-header">
+      <h2 class="section-title">// PROJECT_LOG</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-card__header">
+          <span class="project-tag">AI / ML</span>
+          <span class="project-status">DEPLOYED</span>
+        </div>
+        <h3 class="project-title">JalDrishti</h3>
+        <p class="project-desc">
+          AI-powered groundwater intelligence platform for farmers. Predicts borewell depth,
+          water availability probability, and salinity risk using a Random Forest model.
+        </p>
+        <div class="project-stack">
+          <span>Python</span><span>Flutter</span><span>Firebase</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link" aria-label="View JalDrishti on GitHub">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header">
+          <span class="project-tag">Full Stack</span>
+          <span class="project-status project-status--wip">IN PROGRESS</span>
+        </div>
+        <h3 class="project-title">Dev Portfolio</h3>
+        <p class="project-desc">
+          This very site — a cyberpunk-inspired developer portfolio with HUD aesthetics,
+          glitch animations, and a neon grid interface. Built with pure HTML &amp; CSS.
+        </p>
+        <div class="project-stack">
+          <span>HTML</span><span>CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link" aria-label="View Portfolio source code">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header">
+          <span class="project-tag">AI/ML</span>
+          <span class="project-status project-status--wip">Completed</span>
+        </div>
+        <h3 class="project-title">Safe Signal</h3>
+        <p class="project-desc">
+          Designed a smart traffic signal system that dynamically adjusts red-light duration based on real-time helmet compliance ratios among riders.
+        </p>
+        <div class="project-stack">
+          <span>YOLO</span><span>PyTorch</span><span>Ultralytics</span><span>OpenCV</span><span>PySerial</span><span>Arduino</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link" aria-label="View Portfolio source code">GitHub ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header">
+          <span class="project-tag">Automation</span>
+          <span class="project-status project-status--wip">UPCOMING</span>
+        </div>
+        <h3 class="project-title">NEXT MODULE</h3>
+        <p class="project-desc">
+          New project incoming — stay tuned. Focused on intelligent automation
+          and ML-driven decision systems.
+        </p>
+        <div class="project-stack">
+          <span>Python</span><span>AI</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link" aria-label="Placeholder">TBD ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       CREDENTIALS SECTION
+       Achievements, Certifications, Experience & Events.
+       ================================================ -->
+  <section id="credentials" class="credentials section-wrapper" aria-label="Credentials">
+    <div class="section-header">
+      <h2 class="section-title">// CREDENTIALS</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="credentials-grid">
+
+      <!-- Achievement Card -->
+      <div class="credential-card">
+        <div class="credential-icon" aria-hidden="true">🏆</div>
+        <div class="credential-badge">ACHIEVEMENT</div>
+        <h3 class="credential-heading">AIR-109 in TES-53</h3>
+        <p class="credential-desc">
+          Secured All India Rank 109 in TES-53 — Indian Army 10+2 Technical Entry Scheme.
+      </div>
+
+      <!-- Certification Card -->
+      <div class="credential-card">
+        <div class="credential-icon" aria-hidden="true">📜</div>
+        <div class="credential-badge credential-badge--magenta">CERTIFICATION</div>
+        <h3 class="credential-heading">Be10X AI Tools</h3>
+        <p class="credential-desc">
+          Completed the Be10X AI Tools Certification program — gaining hands-on proficiency in leveraging modern AI-powered productivity and development tools.
+        </p>
+      </div>
+
+      <!-- Experience Card -->
+      <div class="credential-card">
+        <div class="credential-icon" aria-hidden="true">💼</div>
+        <div class="credential-badge credential-badge--yellow">EXPERIENCE</div>
+        <h3 class="credential-heading">Content Writer Intern</h3>
+        <p class="credential-desc">
+          Content Writer Intern at <strong>InAmigos Foundation</strong> — crafted engaging written content,designed visual content,collaborated with teams, and contributed to the foundation's digital outreach initiatives.
+        </p>
+      </div>
+
+      <!-- Hackathon Card -->
+      <div class="credential-card">
+        <div class="credential-icon" aria-hidden="true">⚡</div>
+        <div class="credential-badge credential-badge--green">HACKATHON</div>
+        <h3 class="credential-heading">Recon 7.0 — 24 Hrs</h3>
+        <p class="credential-desc">
+          Participated in <strong>Recon 7.0</strong>, a 24-hour hackathon. Built <strong>Safe Signal</strong> — a smart traffic system using YOLO-based helmet detection — with my team.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT SECTION — NEW
+       Simple terminal-style contact panel.
+       ================================================ -->
+  <section id="contact" class="contact section-wrapper" aria-label="Contact">
+    <div class="section-header">
+      <h2 class="section-title">// ESTABLISH_CONNECTION</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="contact-container">
+      <p class="contact-intro">
+        Want to collaborate, chat about AI, or just say hey?
+        Ping me on any of the channels below — response time: fast.
+      </p>
+
+      <ul class="contact-links" aria-label="Contact channels">
+        <li>
+          <a href="mailto:harsh@example.com" class="contact-item" aria-label="Send email">
+            <span class="contact-icon">✉</span>
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-value">choudhary.harsh0301@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="GitHub profile">
+            <span class="contact-icon">⌥</span>
+            <span class="contact-label">GITHUB</span>
+            <span class="contact-value">github.com/harsh</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="LinkedIn profile">
+            <span class="contact-icon">◈</span>
+            <span class="contact-label">LINKEDIN</span>
+            <span class="contact-value">linkedin.com/in/harsh</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <p class="footer-text">
+      &copy; 2026 &nbsp;·&nbsp; HARSH CHOUDHARY &nbsp;·&nbsp;
+      <span class="footer-accent">SYSTEM RUNNING</span>
+    </p>
+  </footer>
+
+</body>
+</html>
